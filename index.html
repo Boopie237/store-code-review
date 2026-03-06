@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Declares this document as HTML5 -->
+
+<html lang="en">
+<head>
+  <!-- Character encoding allows proper display of text -->
+  <meta charset="UTF-8" />
+
+  <!-- Ensures the page scales correctly on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title displayed in the browser tab -->
+  <title>Green Basket Grocery</title>
+
+  <!-- Connects the external CSS stylesheet to style the page -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<!-- When the page loads, startTimer() begins the inactivity timer -->
+<body onload="startTimer()">
+
+  <!-- Header section that contains the store branding -->
+  <header class="header">
+    <div class="header-inner">
+
+      <!-- Brand area containing logo and store name -->
+      <div class="brand">
+        <!-- Simple logo box showing GB -->
+        <div class="logo">GB</div>
+
+        <div>
+          <h1>Green Basket Grocery</h1>
+          <p class="tagline">Fresh picks, simple checkout</p>
+        </div>
+      </div>
+
+      <!-- Visual badge to indicate the page is a demo store -->
+      <div class="badge">Demo Store</div>
+
+    </div>
+  </header>
+
+  <!-- Main page container -->
+  <main class="container">
+
+    <!-- Card layout for the store shopping section -->
+    <section class="card">
+
+      <h2>Shop Items</h2>
+
+      <!-- Instruction text for users -->
+      <p class="hint">
+        Enter quantities, then calculate or print your receipt.
+        Inactivity resets after 15 seconds.
+      </p>
+
+      <!-- Grid layout used to display product cards -->
+      <div class="grid">
+
+        <!-- Each item div represents one product in the store -->
+        <div class="item">
+
+          <!-- Product information -->
+          <div class="item-info">
+            <div class="item-name">Milk</div>
+            <div class="item-price">$3.50</div>
+          </div>
+
+          <!-- Number input allows the user to select quantity -->
+          <!-- oninput triggers the timer reset when user interacts -->
+          <input type="number" id="milk" value="0" min="0" oninput="startTimer()" />
+
+        </div>
