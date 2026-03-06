@@ -1,0 +1,35 @@
+/* CSS Variables allow reusable colors and values across the stylesheet */
+:root {
+  --green: #1e7a3b;
+  --green-dark: #14572a;
+  --cream: #f7f6f2;
+  --card: #ffffff;
+  --text: #1b1f24;
+}
+
+/* Universal selector ensures padding and borders don't affect layout size */
+* {
+  box-sizing: border-box;
+}
+
+/* Body styles define the main font and background color */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: var(--cream);
+}
+
+/* Header uses a green gradient to create a visual brand identity */
+.header {
+  background: linear-gradient(180deg, var(--green) 0%, var(--green-dark) 100%);
+  color: white;
+  padding: 18px 0;
+}
+
+/* Grid layout displays store items in two columns */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
